@@ -1,0 +1,229 @@
+/* chicken.css */
+
+
+body {
+    background-image: url('snackback.png');
+    background-size: cover;
+    width:100%;
+}
+
+#sixbox {
+	margin-left:auto;
+	margin-right:auto; /* centering the whole content */
+	width:100%;
+	
+	
+	
+}
+
+h3 {
+    margin-top: 150px; /* Setting the position and design */
+    margin-bottom: 10px;
+    margin-left: 20px;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#readmore p {
+    text-align: left;
+    color: #000dff;
+    flex-direction: row-reverse; /* We needed to use reverse for the rating */
+}
+
+#readmore p:hover {
+    color: red; /* color after hover */
+}
+
+#chickenList {
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* setting flex items to wrap to the next line if there's not enough space */
+    justify-content: space-around;  /* Make it evenly spreat out */
+    margin-top: 30px;
+    
+	
+}
+
+#recipe-column {
+    flex-basis: calc(50% - 20px); /* Adjust the width */
+    margin-bottom: 20px;
+    position: relative; /* positioning */
+    box-sizing: border-box; /* Include padding and border in the calculation */
+}
+
+.recipe-column .rating,
+.recipe-column #readmore {
+    position: relative; /* Position  */
+    bottom: 10px; /* Distance from the bottom */
+    right: 10px; /* Distance from the right */
+}
+
+#imgh2p {
+    background-color: rgb(255, 255, 255);
+    display: flex; /* Use flexbox layout */
+    flex-direction: wrap; /* setting flex items to wrap to the next line if there's not enough space */
+    align-items: flex-start; /* position the items on the top */
+    border: 4px solid #000000;  /* Setting the border   */
+    border-radius: 10px;
+    padding: 10px;
+    height:210px;
+    box-sizing: border-box; /* Include padding and border in the calculation */
+}
+
+
+.brocolliimg {
+    width: 180px;
+    height: 180px;
+    transition: transform .5s ease-in-out; /* applying transition for 0,5 seconds to ease in out  */
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.brocolliimg:hover {
+    transform: scale(1.1); /* Increasing the size of the image when hovered on it */
+    transform-origin: center; 
+}
+
+#h2p {
+    margin-top: 10px; 
+    margin-right: 10px;
+    font-size: 16px;
+    display: block; /* Align items to the top */
+
+   
+}
+
+#h2p h2 {
+    color: rgb(25, 53, 193);
+    font-size: 28px;
+    margin-top: 4px;
+    margin-bottom: 5px; /* Add space between h2 and p */
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#h2p h2:hover { 
+    color: rgb(131, 189, 255); /* Changing the color when hoverd on it */
+}
+
+#h2p p {
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px; /* Add space between paragraphs */
+    text-align: left;
+}
+
+.rating {
+    display: flex; /* Allow flex items to wrap to the next line if there's not enough space */
+    align-items: center; /* Align items vertically */
+    flex-direction: row-reverse; /* Reversing the rating to start from left to right */
+}
+
+
+
+.rating input {
+    display: none; /* Hide the radio butons */
+}
+
+.rating label { /* Cutomise stars */
+    font-size: 30px;
+    color: #777;
+    cursor: pointer;
+    margin-top: -12px;
+}
+
+.rating label:before {
+    content: "\2605"; /* Unicode for star */
+}
+
+.rating input:checked ~ label:before {
+    color: #F9BF3B; /*We change color of filled stars */
+}
+
+.rating label:hover:before {
+    color: #f99a3b; /*We change color of stars on hover */
+}
+
+#result-brocolli,
+#result-gordon,
+#result-snitzel,
+#result-steak,
+#result-curry,
+#result-pasta {
+    text-align: left;
+    color: rgb(179, 146, 38);
+}
+
+
+    .search-container {
+        margin-top: -60px;
+        margin-left: 200px;
+        text-align: center;
+    }
+
+    #searchbar {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    #search-button {
+        padding: 8px 15px;
+        background-color: #007bff; /* button color */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .recipes {
+        font-size: 15px;
+        padding: 10px;
+        animation: fadeIn 0.5s ease-in-out; /* Make it look smoother */
+    }
+
+    .recipes:last-child {
+        border-bottom: none;
+    }
+
+    /* Reusing the first animation and playing with it */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    #recipeList {
+        position: absolute;
+        top: 200px; /* Position the recipe list below the search bar */
+        left: 600px;
+        width: 20%;
+        background-color: #5ab6fca4;
+        border: 2px solid #000; /* Border for visibility */
+        border-radius: 5px; /* Rounded corners */
+        padding: 10px; /* Spacing inside the box */
+        display: none; /* Initially hidden */
+        z-index: 9999; /* Box is on top of other elements */
+    }
+    footer {
+        background-color: #000000;
+        color: white;
+        position: absolute;  
+        top: 910px; /*Position from top*/
+        text-align: center;
+        padding-top: 20px; /*Space from top*/
+        padding-bottom: 20px; /*Space from the bottom*/
+        width: 100%; /* Setting width to 100% */
+    }

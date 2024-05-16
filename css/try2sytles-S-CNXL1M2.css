@@ -1,0 +1,696 @@
+@charset "utf-8";
+    /*BODY DESIGN*/
+body {
+    background:#797b80;
+    overflow-y: auto; /*autoscroll*/
+    overflow-x: hidden; /*No to scroll on the sides*/
+    width: 80%;
+    margin: 0; /*full screen*/
+    padding: 0; 
+
+
+}
+        /*HEADER DESIGN*/
+header {
+    background-color: #7CCBF1;
+    position: fixed; /*Always stays on the top of the page*/
+    width: 100%;
+    top: 0; /*full screen*/
+    left: 0; /*full screen*/
+    z-index: 1000; /* The header stays on top of other elements */
+}
+
+.navigation {
+    width:100%;
+
+
+
+}
+nav.dropdownmenu {
+    width: 100%;
+    position: fixed; /*Stays on the top of the page*/
+    top: 0;
+    background: #333;
+    left: 0; /*Position to have space for the logo*/
+    margin-top: 60px;
+    text-align: center;
+    float: right;
+    clear:both;
+
+}
+
+.dropdownmenu ul,
+.dropdownmenu li {
+    margin: 0; /*No margins*/
+    padding: 0; /*No padding*/
+    text-align: center;
+}
+
+.dropdownmenu ul {
+    background: gray;
+    list-style: none; /*No numbering*/
+    width: 100%;
+    text-align: center;
+}
+
+.dropdownmenu li {
+    float: left;
+    width: 20%;
+}
+
+.dropdownmenu a {
+    background: #30a6e6;
+    color: white;
+    display: block; /*Under each other*/
+    font-weight: 400; /*Text design*/
+    font-size: 13px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 25px 89px; /*TOP,BOTTOM and LEFT,RIGHT*/
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease; /*Trying transition for smootger look*/
+    height: 20px;
+
+}
+
+.dropdownmenu li:hover a {
+    background: rgba(59, 160, 160, 0.6);
+}
+
+.dropdownmenu a:hover {
+    background: #1e88e5; /* Changing the background color on hover */
+    transform: scale(1.1); /* Scaling the button on hover */
+}
+            /*LOGO DESIGN*/
+#logo {
+        position: fixed; /*Stays with the menu*/
+        top: 0px; /* top position*/
+        left: 70px;
+        transform: translateX(-50%); /* Move the logo horizontally by 50% of its own width in the negative direction, centering it horizontally */
+        float: left;
+        z-index: 1001;
+        
+    }
+    
+ #logo img {
+        width: 138px; 
+        height: 130px;
+    }
+
+
+            /*COOL STUFF DESIGN*/
+    /*Experimenting, trying to apply an idea of a code to my website*/
+    /*It doesn´t do what i want but it works :D*/
+.neon-effect {
+    position: relative; 
+}
+
+.neon-effect::before {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position the light at the bottom of the menu bar */
+    left: 0;
+    width: 100%;
+    height: 4px; /* Height of the neon line */
+    background-color: #00ffff;
+    animation: neonMove 2s linear infinite; /* Animated movement */
+    z-index: -1; /*Appear behind the element*/
+    /*NOTE: Look at the z-indexes,to understand better*/
+}
+
+/*Defining an animation*/
+@keyframes neonMove {
+    0% { /*At the start of the animation, element will dissapear*/
+        transform: scaleX(0);
+    }
+    50% { /*At the midpoint, element is full visible*/
+        transform: scaleX(1);
+        opacity: 1;
+    }
+    100% { /*In the finish, element dissapears again */
+        transform: scaleX(0);
+    }
+}
+
+            /*SUBMENU DESIGN*/
+#submenu {
+    left: 0;
+    opacity: 0; /*Transparent background*/
+    position: absolute;
+    top: 35px;
+    visibility: hidden; /*Hiding the submenu*/
+    z-index: 1; /*Over other elements*/
+    text-align: center;
+    width: 100%;
+}
+/*NOTE To MYSELF: Look how positioning works*/
+
+li:hover ul#submenu {
+    opacity: 1; /*Showing the submenu*/
+    top: 80px;/*Position from the top*/
+    visibility: visible;/*Not hidden anymore*/
+    text-align: center;
+}
+
+#submenu li {
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+
+#submenu a:hover { /*Hovering design*/
+    background: #df4b05; 
+    text-align: center;
+}
+
+#submenu a {
+    background-color: #34495e;
+    text-align: center;
+}
+
+h1, p, a {
+    color: white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    padding: 10px; 
+}
+
+p {
+    margin: 0;
+    padding: 10px;
+}
+
+
+.dropdownmenu {
+    position: fixed; /*Stays in the same postion*/
+    top: 0;
+    margin: 0;
+    width: 100%;
+    height: 60px; 
+    background-color: #333;  
+    text-align: center;
+    justify-content: center;
+
+}
+        /*MENU DESIGN*/
+#maininfo {
+    list-style: none; /*No numbering*/
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin: 0;
+    display: flex; /*Next to each other*/
+    justify-content: center;/*text-align wont work*/
+    background-color: #3711e4; /* Background color */
+    border-top: 2px solid #7CCBF1; /* Top border */
+    border-bottom: 2px solid #7CCBF1; /* Bottom border */
+    background: #255cbb;
+    width: 100%;
+    float:left;
+}
+
+#maininfo li {
+    margin: 0 10px; /*TOP,BOTTOM and LEFT,RIGHT*/
+    
+}
+
+#maininfo li a {
+    text-decoration: none;
+    color: white;
+    padding: 20px 70px; /* Padding */
+    transition: background 0.3s ease; /*Transitions fixed*/
+}
+
+#maininfo li a:hover {
+    background: #1e88e5; /* Background color on hover */
+}
+
+                /*VIDEO DESIGN*/
+ #video {
+    position: absolute; /*Trying positions, this fits the best*/
+    top: 60px; /*Positions from the top*/
+    width: 100%;
+   ;/*Adjust after for better design*/
+}
+
+#video video { /*Adjusting its position*/
+    margin-top: 65px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 60px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* The video covers the entire container */
+    
+}
+
+#secondpart {
+    width: 100%;
+    object-fit: cover;
+}
+
+
+            /*SEARCHBAR DESIGN*/
+.search-container{
+    width: 100%;
+    clear: both;
+}
+
+
+.search-container h1{
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.search input[type=text] {
+    width: calc(100% - 90px); /* Adjusted to accommodate the button and some spacing */
+    height: 50px;
+    border: black solid; /*Border*/
+    float: left; /* Added to allow button alignment */
+    padding-left:10px;
+    color: #007bb5;
+    font-size: 22px;
+}
+
+
+.search {
+    width: 750px; /*Width of the search box */
+    position: absolute;
+    top: 600px; /*Position*/
+    left: 240px;
+    margin-right: 0;
+   
+    
+}
+
+/*Troubles with adjusting the button next to the search bar*/
+.search button {
+    background-color: #0074D9;
+    color: #f2f2f2;
+    padding: 5px; /* Adjusted padding */
+    font-size: 16px; /* Adjusted font size */
+    border: black solid;
+    cursor: pointer;
+    height: 55px; /* Adjusted height */
+    width: 70px; /* Adjusted width */
+    float: right; /* Aligned button to the right */
+}
+
+.search button i {
+    border: none;
+    cursor: pointer;
+    height: auto; /* Adjusted height to auto */
+    width: auto; /* Adjusted width to auto */
+    margin: auto; /* Adjusted margin for spacing */
+}
+
+        /*RESULTS FOR SEARCH DESIGN*/
+
+#list {
+    list-style: none; /* Removing bullets or numbering */
+    padding: 0; /* Removing padding inside*/
+    margin: 0; /*Removing margins too*/
+}
+
+.recipes {
+    font-size: 20px;
+    padding: 10px;
+    animation: fadeIn 0.5s ease-in-out; /*Make it look smoother*/
+}
+
+.recipes:last-child {
+    border-bottom: none;
+}
+
+/*Reusing the first animation and playing with it*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*Learning about animation with https://animista.net/*/
+
+
+#recipeList {
+    position: absolute;
+    top: 100%; /* Position the recipe list below the search bar */
+    left: 0;
+    width: 87%;
+    background-color: #5ab6fca4;
+    border: 2px solid #000; /* Border for visibility */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Spacing inside the box */
+    display: none; /* Initially hidden */
+    z-index: 9999; /* Box is on top of other elements */
+}
+
+
+            /*SLIDESHOW DESIGN-https://www.w3schools.com/w3css/w3css_slideshow.asp*/ 
+            /*Many problems with this one*/
+.container {
+    padding-bottom: 20px; /*Adjusting the padding so we can still see the div*/
+    padding-left: 15px;
+    padding-top: 20px;
+    left: -10px; /*Moving it outside the page because its is too big*/
+    margin-right: 0;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    position:absolute;
+    top: 700px; /*Position from top*/
+    background-color: #30a6e6;
+    width: 80%;
+}
+
+.slider-wrapper {
+    position: relative;
+    max-width: 58rem;
+    margin:0 auto;
+    overflow: hidden; /*Hide the pictures*/
+}
+
+
+.slider {
+    display: flex;
+    aspect-ratio: 16/9 ;
+    overflow-x: auto; /* horizontal scrolling */
+    scroll-snap-type: x mandatory; /*scrolling behavior to snap to elements*/
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0,75rem hsla(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;  /*round the corners*/
+    margin: 0;
+    
+
+}
+
+.slider-nav {
+    display: flex; /*next to each other*/
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 0px; /*bottom of the container*/
+    left: 50%;
+    transform: translateX(-50%);  /* Moving the navigation back by half of its own width to center it perfectly */
+    z-index: 1; /*Above other elements*/
+
+}
+/*Buttons*/
+.slider-nav a {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%; /*Circles*/
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms; /*transition*/
+}
+
+.slider-nav a:hover {
+    opacity: 1; 
+}
+
+.slider::-webkit-scrollbar { /* Hiding the scrollbar */
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+#text { /*Text for a slide show*/
+    position: absolute;
+    top: 100px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    max-width: 300px; /* Maximum width of the text */
+    padding: 20px;
+    color: white;
+}
+
+.slide {
+    position: relative;
+    flex: 0 0 100%; /* Each slide takes the full width */
+    scroll-snap-align: start; /*Scroll aligmrnt to start*/
+}
+
+.slide h1 { /*Adjusting the h1*/
+    position: relative;
+    top: -26px;
+}
+
+.slide img {
+    width: 70%;
+    height: 85%;
+    left: 0px;
+    margin-bottom: 10px;
+    margin-top: -34px;
+    border-radius: 8px 8px 8px 8px;
+}
+
+
+.slide-content {
+    position: absolute;
+    top: 280px; /*Postion from top */
+    left: 80%; /*Position from left */
+    width: 30%;
+    transform: translate(-50%, -50%); /*Centering the content horizonatlly and vertiaclly*/
+    max-width: 100%; 
+    text-align: center;
+    color: white;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    padding: 15px; /*In the text box*/
+}
+/*Desiging the text*/
+.slide-content p {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.3;
+    text-align: justify;
+}
+/*https://www.w3schools.com/howto/howto_css_social_media_buttons.asp*/
+/*Desiging the small icons*/
+ .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+  .fa-instagram {
+    /*background: #125688;*/
+    color: white;
+    /*Googled color of the IG*/
+    background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf) 
+  }
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+/*Sizing the icons*/
+  .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+    border-radius: 50%; /*Making it a circle*/
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+
+/*DESIGN FOR CONTACT FORM*/
+/*https://www.w3schools.com/howto/howto_css_contact_form.asp*/
+  .sidetext {
+    position: absolute; /*Left Side*/
+    top: 700px; /*position from top*/
+    left: 965px; /*Next to container*/
+    width: 22.7%; /* Adjusted width and height*/
+    height: 600px; 
+    background-color: #251c5e; /*Matching the color*/
+    padding: 5px;
+    text-align: left;
+}
+
+.sidetext h1 {
+    color: #ffffff;
+    font-size: 28px;
+    margin: 0;
+    padding: 20px 10px; /*Giving it a bit more space*/
+}
+
+.sidetext form {
+    margin: 20px; /*Margin for input fields*/
+    width: 82%;
+}
+
+.sidetext .input-field {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    padding-left: 10px;
+    border: 1px solid #777;
+    border-radius: 8px; /*Corners are circuled*/
+    outline: none;
+}
+
+.sidetext .input-long { /*Message*/
+    width: 97%;
+    height: 150px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #777;
+    border-radius: 8px;
+    outline: none;
+    resize: none; /*It was resizing to the sides*/
+    overflow-y: auto; /*if text is bigger*/
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-align: left;
+}
+
+.sidetext .btn {
+    border-radius: 20px; /*Circle*/
+    color: #ffffff;
+    margin-top: 18px; /*position from the long-input*/
+    padding: 15px;
+    background-color: #1e88e5;
+    font-size: 12px;
+    border: none;
+    cursor: pointer; /*you can see where you are pointing*/
+    transform: scale(1.1); 
+    transition: box-shadow 0.3s ease; /* Transition for smooth effect */
+}
+
+.sidetext .btn:hover {
+    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75); /* Adding shadow effect on hover */
+}
+
+/*DESIGN FOR RECOMMENDED RECEPIES*/
+.containercards { /*Container including the cards*/
+    height: 300px;
+    width: 1000px;
+    top: 60px;
+    margin-left:auto ;
+    margin-right: auto;
+    display: flex; /*In the row*/
+    
+  }
+  
+  .card {
+    display: inline-block; /*next to each other*/
+    height: 280px;
+    width: 400px;
+    background-color: #374369;
+    border-radius: 10px; /*Curvy*/
+    box-shadow: -1rem 0 3rem #000000; /*Shadow so it looks they are on the top of each other*/
+    transition: 0.4s ease-out; /*Transition of picking*/
+    position: relative;
+    left: 20px;
+    margin-top: 0px;
+  }
+  /*Having a lot of troubles doing what i wanted-Had to google the problem*/
+  /*Googling this line of code for design i want*/
+  .card:not(:first-child) {
+      margin-left: -50px;
+  }
+  
+  .card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+  }
+  
+  .card:hover ~ .card { /*~ this is representing the sibling*/
+    position: relative; 
+    left: 50px;
+    transition: 0.4s ease-out;
+  }
+/*Title of category*/
+.recommended {
+    color:#fff;
+    top: 1150px; /*Position from top*/
+    text-align: center; /*Centering all the elements*/
+    position: relative;
+    background-color: #181c42;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-top: 5px;
+    padding-bottom: 28px;
+    margin-bottom: -10px;
+    width:100%; /*Whole screen*/
+    align-items: center;
+  }
+  
+  .title a{
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    font-family:'Times New Roman', Times, serif;
+  }
+
+  .title a:hover{
+    color: rgb(0, 0, 0); /*Hovering effect*/
+  }
+
+  .title a::after{ /*After clickin on it*/
+    color: rgb(61, 59, 59);
+  }
+
+  a {
+    text-decoration: none; /*Doesn´t look like a link*/
+    }
+
+  .recepe { /*Recepe DIV design*/
+    color: white;
+    font-weight: 300;
+    position: absolute;
+    top:45px;
+    left: 10px;
+    
+
+  }
+
+  .recepe p{ /*Recepe description design*/
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    position: absolute;
+    text-align: left;
+  }
+
+  .recepe p a:hover{ /*Same hovering color*/
+    color:#181c42;
+  }
+  .recepe p a::after{ /*Same design here too*/
+    color: rgb(61, 59, 59);
+  }
+
+/*Recepe image*/
+  .recepe img{
+    left: 20px; /*Position*/
+    top: 250x;
+    width: 170px;
+    height: 145px;
+    display: block; /*Uner each other*/
+    margin-top: 75px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 8px 8px 8px 8px; /*Not sharp box*/
+  }
+
+  /*DESIGN FOR FOOTER*/
+  footer {
+    background-color: #000000;
+    color: white;
+    position: absolute; 
+    left: 0;
+    top: 1680px; /*Position from top*/
+    text-align: center;
+    padding-top: 20px; /*Space from top*/
+    padding-bottom: 20px; /*Space from the bottom*/
+    margin: 0; /* Remove margin */
+    width: 100%; /* Setting width to 100% */
+}

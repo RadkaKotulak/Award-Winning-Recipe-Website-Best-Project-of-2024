@@ -1,0 +1,179 @@
+body {
+    background-color: rgb(29, 40, 68);
+    background-size: cover;
+    background-image: url('snackback.png');  /* Setting up the background */
+    width:100%;
+    
+}
+
+h2 {
+  padding-top: 20px;  /* Setting up the position and desing for Heading2 */
+    margin-top: 150px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h4 {
+  text-align: center; /* Center the recipe title */
+  font-size: 45px; /* Set font size */
+  margin: auto; /* Center horizontally */
+}
+
+.box {
+  position: relative; /* Set position to relative */
+  z-index: -1; /* Set z-index to push the background underneath */
+  padding-bottom:420px; /* Adjust padding as needed */
+  padding-top:25px;
+}
+  
+.recipe-container {
+  margin-top: -390px;
+  margin-right: auto;
+  margin-left: auto;
+  box-sizing: border-box;    /* Include padding and border in the total width and height of the element */
+  background-color: rgb(66, 132, 255);
+  z-index: 1;    /* Set the stacking order of the element */
+  border: 7px solid black;
+  position: relative;
+  width:1000px;
+
+}
+
+  .firstline {
+   display: flex; /* Use flexbox for layout */
+   background-color: rgb(255, 255, 255);
+   border-bottom: 7px solid black;
+   width: 100%;
+}
+
+      .recipe-picture { 
+        margin-top: 8px;
+        margin-left: 8px;
+        margin-right: 8px;
+        /*border-radius: 15%; /* Use 50% to create a circular shape */
+        overflow: hidden; /* Ensure the image stays within the rounded bounds */
+        width:400px;
+        height:410px;
+
+      }
+      .recipe-picture img {
+        width: 100%; /* Make the image responsive */
+        
+      }
+      .recipe-icons {
+        background-color: rgb(66, 132, 255);
+        margin-bottom: 20px;
+        display: flex; /* Use flexbox */
+        flex-direction: row; /* Arrange items horizontally */
+        border-bottom: 7px solid black;
+        border-left: 7px solid black;
+        border-right: 7px solid black;
+        width: 100%;
+    }
+     .iandi {
+      display: flex;
+      flex-direction: column; /* Arrange flex items in a column direction */
+     }
+    
+      .recipe-ingredients {
+        display: flex;
+        flex-direction: column;  /* Arrange flex items in a column direction */
+        padding-right: 50px;
+        width: 70%;
+        align-items: center;
+        font-size: 30px;
+        margin-right: 10px;
+        margin-left: 10px;
+        
+    }
+    .numofportion{
+      margin-top: 10px;
+      font-size: 20px;
+      margin-left: 120px;
+    
+    }
+     .ingredient-list {
+        font-size:20px;
+        position: center;
+        margin-top: 10px;
+        
+        
+      }
+        
+      .ingredient-list ul{
+      
+        display: grid;
+        grid-template-columns: repeat(3,40%); /* Create 2 columns */
+        column-gap: 50px; /* Add gap between grid items */
+        list-style: none;
+    
+      }
+
+      .measure,
+      .item,
+      .num {
+         font-size:25px;
+         text-align: center;
+        }
+
+      .measure{
+        text-align: left;
+        margin-right: 10px;
+        margin-left: -50px;
+        margin-right: 130px;
+
+      }
+      .item{
+        margin-left: 10px;
+        text-align: left;
+
+      }
+      .num{
+        margin-left: 70px;
+
+      }
+        
+      .measure,
+      .num{
+        column-gap: 20px; /* Create a gap */
+      }
+      
+
+ .secondline {
+ text-align: left;
+ background-color: rgb(255, 255, 255);
+ color: rgb(2, 5, 21);
+ margin-right: 10px;
+ margin-left: 10px;
+ margin-top: 10px;
+ margin-bottom: 10px;
+ }
+
+      
+      .steps {
+        float: right;  /* Float the element to the right */
+        font-size: 20px;
+      }
+
+      .secondline::after {
+        content: ""; /* Generate content after the element */
+        display: table;  /* Change the element's display type to "table" */
+        clear: both;    /* Clear floats after the element */
+      }
+      
+      footer {
+        background-color: #000000;
+        color: white;
+        position: absolute; /* Change position to absolute */
+        left: 0;
+        top: 1220px;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 0; /* Remove margin */
+        width: 100%; /* Set width to 100% */
+    }

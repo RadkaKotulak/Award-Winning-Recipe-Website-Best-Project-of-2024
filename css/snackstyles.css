@@ -1,0 +1,150 @@
+@charset "utf-8";
+#wholepage { /*Whole idea for this HTML is inspired with ATU website*/
+    background-image: url(snackback.png);
+    background-size: cover; /*Covers the whole page*/
+    overflow-y:auto; /*Auto scroll down*/
+    overflow-x: hidden; /*NO scroll on the side*/
+    width: 100%; /*Width od the body*/
+
+}
+
+.whitebox {
+    position: absolute; 
+    top: 1030px; /*Position from the top*/
+    left: 50%; /*50% from the left*/
+    transform: translate(-50%, -50%);
+    width: 1265px; /*Have to use px instead of %*/
+    max-width: 100%; 
+    }
+
+.whitebox h1{
+    color: #000000; /*Color for H1*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*Font*/
+    -webkit-animation: fadein 2s; /*Transition*/
+    margin-top:150px; /*Small space from the top*/
+   
+}
+/*Easy transition*/
+@-webkit-keyframes fadein { 
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.smallpart{
+    background-color:#ffffff;
+    width: 95%; /*With not more than 95%*/
+    display: flex; /*In the row*/
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: auto; /*Center*/
+    margin-right: auto;
+    
+}
+
+.smallpart h2 { /*Adjustment for H2*/
+    text-align: center;
+    padding: 10px;
+    width: 90%;
+    background-color: #255cbb;
+    color: #ffffff;
+    border-radius: 8px; /*Circle the corners*/
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.box { 
+    display: flex; /*In row*/
+    flex-direction: row;
+    width: 100%;
+    padding: 0; /*Padding 0*/
+    justify-content: space-between;
+    margin: -2px;
+
+}
+
+.picture{ /*Adjustment for picture div*/
+    /*Trying to adjust it in the box*/
+    width: 700px;
+    margin-top: 2px;  
+    margin-left: -31px; 
+    margin-right: -31px; 
+    margin-bottom: -2px;
+   
+}
+
+.picture img { /*Adjutsment for image in the picture div*/
+    width: 100%; 
+    max-width: 563px; 
+    height: 450px;
+    object-fit: cover; /*Fits entire container*/
+    padding-left: 80px;
+    padding-right: 80px;
+
+}
+
+
+.content1 {
+    flex: 1;
+    padding: 20px 70px;
+    text-align: left; /* Align text to the left */
+
+}
+
+.content1 p { /*Paragraph adjustment*/
+    text-align: left; /* Align text to the left */
+    color:#333;
+    border-left: #000000 solid;
+    border-width: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) 25ms both;
+}
+
+/*Smooth transition*/
+    @-webkit-keyframes fade-in-left {
+        0% {
+          transform: translateX(-50px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      /*Created with Animista website,just a test*/
+
+.content2 {
+    flex: 1;
+    padding: 20px 70px;
+    text-align: right;
+    
+}
+.ingredients {
+    font-weight: bold;
+    
+}
+
+.content2 p {
+    text-align: left; /* Align text to the left */
+    color:#333;
+    border-left: #000000 solid;
+    border-width: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#theend{ /*Had to name the footer*/
+    background-color: #000000;
+    color: white;
+    position: absolute;  
+    top: 2010px; /*Position from top*/
+    text-align: center;
+    padding-top: 20px; /*Space from top*/
+    padding-bottom: 20px; /*Space from the bottom*/ 
+    width:2000px; /*Whole screen*/
+    margin-left:-320px;
+    
+}
