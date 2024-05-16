@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twins Recipes-INSTRUCTIONS</title>
+    <link rel="icon" href="pictures/icon.png" type="image/x-icon"><!-- Icon of the webpage -->
+    <link href="css/try2sytles.css" rel="stylesheet" type="text/css">
+    <link href="css/recepestyle.css" rel="stylesheet" type="text/css">
+    <script src="js/btn-send.js"></script>
+    <script src="js/rating.js"></script>
+    <script src="js/searchbar.js"></script>
+    <script src="js/portion.js"></script>
+</head>
+<body>
+    <header> 
+        <!-- Unordered list with main navigation links -->
+            <ul id="maininfo">
+                <!-- List item containing a link to the section with IDs -->
+                <li><a href="Index.html">HOME</a></li>
+                <li><a href="Index.html#about">ABOUT US</a></li> <!--Javascript for scrolling function,otherwise it was linked to a half of the div-->
+                <li><a href="Index.html#sidetext">CONTACT US</a></li>
+            </ul>
+        </header>
+    
+    
+<div id="logo">
+    <a href="Index.html"><img src="pictures/Rsmaller.jpg" alt="" width="500" height="500" class="logo"/></a>
+  </div>
+
+    
+    <nav class="dropdownmenu"> <!--Creating a navigation panel-->
+        <ul> <!--Creating the unordered list for MENU bar-->
+            <li class="neon-effect"><a href="#">STARTERS</a>
+                <ul id="submenu">
+                    <li><a href="soup.html">Soups</a></li>
+                    <li><a href="">Starters</a></li>
+
+                </ul> 
+            </li>
+
+            <li class="neon-effect"> <a href="#">MAINS</a><!--Creating a first item for MENU bar with a class-->
+                <ul id="submenu"> <!--Creating the unordered list for SUBMENU for MAINS-->
+                <li><a href="chicken.html">Chicken</a></li> <!--Creating a few items, we add the link for others html after-->
+                <li><a href="">Beef</a></li>
+                <li><a href="">Lamb</a></li>
+                <li><a href="">Vegetarian</a></li>
+            </ul> <!--Closing the submenu ul-->
+        </li>
+
+             <li class="neon-effect"> <a href="#">DESSERTS</a> 
+                <ul id="submenu">
+                <li><a href="">Sweet</a></li>
+                <li><a href="">Yeast</a></li>
+                <li><a href="">Christmas</a></li>
+                <li><a href="">Easter</a></li>
+            </ul> 
+        </li>
+            <li class="neon-effect"> <a href="#">SIDES</a> 
+                <ul id="submenu">
+                <li><a href="">Potatoes</a></li>
+                <li><a href="">Veg</a></li>
+            </ul> 
+        </li>
+            <li class="neon-effect"> <a href="snack.html">SNACKS</a>
+                <ul id="submenu">
+                    <li><a href="">Spreads</a></li>
+                    <li><a href="">Vegetarian</a></li>
+                </ul>
+            </li>
+        </ul> <!--Closing the MENU bar ul-->
+    </nav>
+    <!--Creating interface for use of javascript-->
+    <div class="box">
+    <h2>Brocolli Sauté</h2>
+    </div>
+            <div class="recipe-container">
+                <div class="firstline">
+                     <div class="recipe-picture">
+                        <img src="pictures/brocollisote.jpg" alt="Brocolli Soté" class="brocolli" >
+                    </div>
+                <div class="iandi">
+                    <!--Inserting icons and text-->
+                    <div class="recipe-icons">
+                        <img src="pictures/timer.png" alt="timer Icon" > 
+                        <p>45 mins</p> <hr>
+                        <img src="pictures/ramen.png" alt="Ramen Icon" > 
+                        <p>easy</p> <hr>
+                        <img src="pictures/money.png" alt="Money Icon" > 
+                        <p>cheap</p> 
+                      </div>
+                <div class="recipe-ingredients">
+                    
+                    <!--creating list for 3 columns-->
+                    </div>
+                  <h4>Ingredients:</h4>
+                  <div class="numofportion">
+                    <label for="portions">Portions:</label>
+                    <input type="number" id="portions" onchange="calculateIngredients()">
+                </div>
+                  <div class="ingredient-list">
+                    <ul>
+                    <li class="item">Chicken Breast</li>
+                    <li class="num" value="120">120</li>
+                    <li class="measure">g</li> 
+                    
+                    
+                    <li class="item">Olive Oil</li>
+                    <li class="num" value="8">8</li>
+                    <li class="measure">ml</li>
+                    
+                    <li class="item">Onion</li>
+                    <li class="num" value="1">1</li>
+                    <li class="measure">pc</li>
+                    
+                    <li class="item">Broccoli</li>
+                    <li class="num" value="50">50</li>
+                    <li class="measure">g</li>
+                    
+                    <li class="item">Blue Cheese</li>
+                    <li class="num" value="20">20</li>
+                    <li class="measure">g</li>
+                    
+                    <li class="item">Garlic</li>
+                    <li class="num" value="1">1</li>
+                    <li class="measure">pcs</li>
+                    
+                    <li class="item">Milk</li>
+                    <li class="num" value="10">10</li>
+                    <li class="measure">ml</li>
+                    
+                    <li class="item">Salt, BP, others</li>
+                    <li class="num" value="0.01">0.01</li>
+                    <li class="measure">mg</li>
+                    
+                  </ul>
+                  </div>
+            </div>
+            </div>
+                
+              
+          <!--creating instructions as a checkboxes-->
+            <div class="secondline">
+                  <div class="steps">
+                <h4>Instructions:</h4>
+                <ol>
+                <li><input type="checkbox">Step: In a larger pot, fry finely chopped onions in hot oil until vitreous.</li><hr>
+                <li><input type="checkbox">Step: Add chopped chicken breast into small pieces.</li><hr>
+                <li><input type="checkbox">Step: Season the meat and let it simmer over a weaker flame for about 20 minutes.</li><hr>
+                <li><input type="checkbox">Step: In the second saucepan, pour the chopped and washed brocolli into smaller pieces with 1 cup of hot water.</li> <hr>
+                <li><input type="checkbox">Step: Simmer for about 10 minutes - until softened. </li><hr>
+                <li><input type="checkbox">Step: Then mix the brocolli with the water left in the pot. </li><hr>
+                <li><input type="checkbox">Step: Incorporate blue cheese, crushed garlic cloves and salt into the resulting puree.</li><hr>
+                <li><input type="checkbox">Step: If necessary, add a little milk. When the meat is ready, mix it with the resulting brocolli sauce.</li><hr>
+
+                  
+                </ol>
+              </div>
+            </div>
+            </div>
+        </div>
+        <footer>
+            Copyright © 2024| created by Rebeka Kotuľáková & Radka Kotuľáková
+        </footer>
+</body>
+</html>

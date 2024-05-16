@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Twins Recipes</title> <!-- Title of the webpage -->
+            <link rel="icon" href="pictures/icon.png" type="image/x-icon"><!-- Icon of the webpage -->
+
+        <!--CSS-->
+        <link href="css/try2sytles.css" rel="stylesheet" type="text/css">  <!-- Link to an external CSS file named "try2sytles.css" -->
+        <!-- Link to an external CSS file from a CDN (Content Delivery Network) hosting the Font Awesome library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!--JAVASCRIPT-->
+        <script src="js/btn-send.js"></script>  <!-- Link to an external JavaScript file named "btn-send.js" NOT WOKRING YET -->
+        <script src="extras/search.js"></script> <!-- Link to an external JavaScript file named "search.js" NOT WOKRING YET-->
+        <script src="extras/scroll.js"></script> <!-- Link to an external JavaScript file to scroll -->
+        <script src="extras/slide.js"></script>
+    </head>
+
+<body>
+    <div id ="block">
+    <div id="navigation">
+    <header> 
+    <!-- Unordered list with main navigation links -->
+        <ul id="maininfo">
+            <!-- List item containing a link to the section with IDs -->
+            <li><a href="Index.html">HOME</a></li>
+            <li><a href="#" onclick="scrollToAbout()">ABOUT US</a></li> <!--Javascript for scrolling function,otherwise it was linked to a half of the div-->
+            <li><a href="#" onclick="scrollToAbout()">CONTACT US</a></li>
+        </ul>
+    </header>
+    
+    <nav class="dropdownmenu"> <!--Creating a navigation panel-->
+        <ul> <!--Creating the unordered list for MENU bar-->
+            <li class="neon-effect"><a href="#">STARTERS</a><!--Creating the first item for MENU bar with a class-->
+                <ul id="submenu"><!--Creating the unordered list for SUBMENU for MAINS-->
+                    <li><a href="soup.html">Soups</a></li><!--Creating a few items as a submenu, we add the link for others html after-->
+                    <li><a href="">Starters</a></li>
+                </ul> <!--Closing the submenu ul-->
+            </li>
+
+            <li class="neon-effect"> <a href="#">MAINS</a><!--Continuing to do the same thing for other items-->
+                <ul id="submenu"> 
+                    <li><a href="chicken.html">Chicken</a></li> 
+                    <li><a href="">Beef</a></li>
+                    <li><a href="">Lamb</a></li>
+                    <li><a href="">Vegetarian</a></li>
+                </ul> 
+            </li>
+             <li class="neon-effect"> <a href="#">DESSERTS</a> 
+                <ul id="submenu">
+                    <li><a href="">Sweet</a></li>
+                    <li><a href="">Yeast</a></li>
+                    <li><a href="">Christmas</a></li>
+                    <li><a href="">Easter</a></li>
+                </ul> 
+            </li>
+            <li class="neon-effect"> <a href="#">SIDES</a> 
+                <ul id="submenu">
+                    <li><a href="">Potatoes</a></li>
+                    <li><a href="">Veg</a></li>
+                </ul> 
+            </li>
+            <li class="neon-effect"> <a href="snack.html">SNACKS</a>
+            </li>
+        </ul> <!--Closing the MENU bar ul-->
+    </nav> <!--Closing the navigation -->
+</div>
+
+      <!--DONT FORGET TO ADD HYPERLINKS!!!!!!!! -->
+      <!--Creating the DIV for picture with logo-->
+    <div id="logo"> 
+            <a href="Index.html"><img src="pictures/Rsmaller.jpg" alt="logo" width="500" height="500" class="logo"/></a>
+    </div>
+</div>
+
+    <!--Creating a DIV containing the video-->
+    <div id="video">
+        <video width="320" height="240" autoplay muted> <!--Adding width,height and other attributtes-->
+            <source src="cooking.mp4" type="video/mp4">
+        </video>
+    </div>
+
+<div id="secondpart">
+    <div id="search-container" class="search-container">
+        <h1>Search for recipes</h1>
+            <div class="search">
+                <!-- Input field for entering search query -->
+                <input type="text" placeholder="Chicken curry..." name="search" id="searchbar" onkeyup="toggleRecipeList()" oninput="search_recipe()">
+                <!-- Button for submitting the search -->
+                <button>
+                    <!-- Icon for search, using online fonts -->
+                    <i onclick="search_recipe()" class="fa fa-search" style="font-size: 20px;"></i>
+                </button>
+
+        <div id="recipeList" class="recipe-list"> <!-- DIV for storing all the recepies that will be shown when searching -->
+            <ul id='list'><!--ADD HYPERLINKS-->
+                <li class="recipes"><a href="recepe.html">Brocolli Sauté</a></li>
+                <li class="recipes"><a href="#">Baked pasta</a></li>
+                <li class="recipes"><a href="#">Beaten Potatoes</a></li>
+                <li class="recipes"><a href="#">Cordon Blue</a></li>
+                <li class="recipes"><a href="#">Cumin Soup</a></li>
+                <li class="recipes"><a href="#">Chicken Broth</a></li>
+                <li class="recipes"><a href="#">Chicken Snitzel</a></li>
+                <li class="recipes"><a href="#">Chicken Steak</a></li>
+                <li class="recipes"><a href="#">Chicken Curry</a></li>
+                <li class="recipes"><a href="#">Frankfurt Soup</a></li>
+                <li class="recipes"><a href="#">Hokkaido with Curry</a></li>
+                <li class="recipes"><a href="#">Sourkraut Soup</a></li>
+                <li class="recipes"><a href="chicken.html">Chicken</a></li>
+                <li class="recipes"><a href="soup.html">Soup</a></li>
+                <li class="recipes"><a href="snack.html">Snacks</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+<section id="about" class="container">  <!-- Big DIV conatiner -->
+    <div class="slider-wrapper"> <!-- Wrapper for the slider -->
+        <div class="slider"><!-- Slider containing individual slides -->
+            <div class="slide" id="slide-1"> <!--DIV for Slide 1-->
+                <h1>ABOUT US</h1>
+                    <img id="twins" src="pictures/twins.jpg" alt="twins">
+            <div class="slide-content"> <!-- Content for slide 1 -->
+                <h2>KOTULAK TWINS</h2>
+                    <p>We are twins from Slovakia, and we have always been interested in cooking, and our passion for technology has inspired us to connect these two worlds together. We've collected a lot of recipes during our time working in hospitality, and we're ready to share them with you.</p>
+            </div>
+            </div>
+            <div class="slide" id="slide-2"> <!--DIV for Slide 2-->
+                <h1>ABOUT US</h1>
+                    <img src="pictures/radka.JPG" alt="radka">
+            <div class="slide-content"> <!-- Content for slide 2 -->
+                <h2>Radka Kotuľáková</h2>
+                    <p>Meet Radka, our dynamic hospitality enthusiast! With five years of study in Slovakia and additional training in the Czech Republic, she's a seasoned pro. Currently, she works in a hotel in Ireland. When she's not working, you'll find Radka savoring her favorite dish—lasagne.</p>
+                <br> <!--Hyperlinks for contact with icons from the external source-->
+                    <a href="https://www.facebook.com/radka.kotulakova" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/radkakotulak/" class="fa fa-instagram"></a> 
+                    <a href="https://www.linkedin.com/in/rebeka-kotu%C4%BE%C3%A1kov%C3%A1-b9ab5b238/" class="fa fa-linkedin"></a> 
+            </div>
+            </div>
+            <div class="slide" id="slide-3"> <!--DIV for Slide 3-->
+                <h1>ABOUT US</h1>
+                    <img src="pictures/rebeka.JPG" alt="rebeka">
+            <div class="slide-content"> <!-- Content for slide 3 -->
+                <h2>Rebeka Kotuľáková</h2>
+                    <p>Meet Rebeka, one of our talented culinary experts! Last summer, she wowed taste buds in France, specializing in appetizers and desserts. Rebeka loves fancy restaurants and doesn't mind spending a bit extra for great food. She's all about enjoying delicious meals and discovering new flavors!</p>
+                <br><!--Hyperlinks for contact with icons from the external source-->
+                    <a href="https://www.facebook.com/rebeka.kotulakova" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/rebekakotulak/" class="fa fa-instagram"></a> 
+                    <a href="https://www.linkedin.com/in/radka-kotu%C4%BE%C3%A1kov%C3%A1-791a62238/" class="fa fa-linkedin"></a> 
+            </div>
+            </div>
+        </div>
+    
+             <!-- Slider navigation links -->
+            <div class="slider-nav">
+                <a href="#slide-1"> </a> <!-- Link to slide 1 -->
+                <a href="#slide-2"> </a> <!-- Link to slide 2 -->
+                <a href="#slide-3"> </a> <!-- Link to slide 3 -->
+            </div>
+        </div>
+    
+</section>
+
+<hr>  <!-- DIV for the contact section -->
+<div class="sidetext">
+    <h1>CONTACT US HERE</h1>
+    <div id="sidetext">  <!-- Form for contacting, NOT WORKING-->
+        <form action="mailto:re.kotulakova@gmail.com" method="post" enctype="text/plain">
+            <!-- Input fields for name, email, and subject -->
+            <input type="text"  class="input-field" placeholder="Your Name">
+            <input type="text" id="input-field" class="input-field" placeholder="Your Email">
+            <input type="text"  class="input-field" placeholder="Subject">
+              <!-- Textarea for message -->
+            <textarea id="input-long" class="input-long" placeholder="Your message"></textarea>
+           <!-- Button for submitting the form -->
+            <button type="button" class="btn" id="button" onclick="validateEmail()">Send</button> <!--JS FUNCTION FOR VALIDATING THE EMAIL and when hit button, clearing the data-->
+            <!-- The onclick attribute calls the Validation function defined in JavaScript, passing the button element as a parameter -->
+            <!-- This function is responsible for validating the email address and clearing the form data NOT WORKING-->
+        </form>
+    </div>
+</div>
+</div>
+</div>
+
+<div class="recommended"> <!-- DIV container recommended recipes section -->
+    <h1>Recommended recipes</h1> <!-- Heading for the recommended recipes section -->
+        <div class="containercards"> <!-- Container for recipe cards -->
+            <div class="card"> <!-- Recipe card -->
+                <h3 class="title"> <a href="soup.html">SOUP</h3></a> <!-- Title of the recipe with a link to the recipe page -->
+                <div class="recepe"> <!-- Container for recipe details -->
+                    <p><a href="#">Frankfurt Soup with Sausage</a> </p>  <!-- Link to the recipe page -->
+                    <a href="#"><img src="pictures/frankfurt.jpg" alt="frankfurtsoup"></a>  <!-- Image of the recipe with hyperlink -->
+            </div>
+        </div>
+ <!-- REPEAT THE SAME PROCESS FOR CREATING MORE CARDS -->
+            <div class="card">
+                <h3 class="title"> <a href="chicken.html">CHICKEN</h3></a>
+                <div class="recepe">
+                    <p><a href="#"> Cordon Blue </a></p>
+                    <a href="#"><img src="pictures/gordon.jpg" alt="cordonblue"></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="title"> <a href="chicken.html">CHICKEN</h3></a>
+                <div class="recepe">
+                    <p><a href="recepe.html"> Chicken Sauté with brocolli and blue cheese sauce</a> </p>
+                    <a href="#"><img src="pictures/brocollisote.jpg" alt="brocolli sote"></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="title"> <a href="soup.html">SOUP</h3></a>
+                <div class="recepe">
+                    <p><a href="#"> Chicken Broth with noodles </a></p>
+                    <a href="#"><img src="pictures/broth.jpg" alt="chickenbroth"></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="title"> <a href="chicken.html">CHICKEN</h3></a>
+                <div class="recepe">
+                <p><a href="#"> Chicken Curry with Rice </a></p>
+                <a href="#"><img src="pictures/curry.jpg" alt="chickencurry"></a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3 class="title"> <a href="soup.html">SOUP</h3></a>
+                <div class="recepe">
+                    <p> <a href="#">Sourkraut Soup </a></p>
+                    <a href="#"><img src="pictures/capustnica.jpg" alt="sourkrautsoup"></a>
+                </div>
+            </div>
+        </div>
+</div>
+
+ <!-- Adding same footer for the page -->
+<footer>
+    Copyright © 2024| created by Rebeka Kotuľáková & Radka Kotuľáková
+</footer>
+
+</body>
+</html>

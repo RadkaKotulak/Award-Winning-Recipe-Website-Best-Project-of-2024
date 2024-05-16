@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twins Recipes-CHICKEN</title>
+    <link rel="icon" href="pictures/icon.png" type="image/x-icon"><!-- Icon of the webpage -->
+    <link href="css/try2sytles.css" rel="stylesheet" type="text/css">
+    <link href="css/chicken.css" rel="stylesheet" type="text/css">
+    <script src="js/rating.js"></script>
+    <script src="js/search.js"></script>
+</head>
+<body>
+        <header> 
+            <!-- Unordered list with main navigation links -->
+                <ul id="maininfo">
+                    <!-- List item containing a link to the section with IDs -->
+                    <li><a href="Index.html">HOME</a></li>
+                    <li><a href="Index.html#about">ABOUT US</a></li> <!--Javascript for scrolling function,otherwise it was linked to a half of the div-->
+                    <li><a href="Index.html#sidetext">CONTACT US</a></li>
+                </ul>
+            </header>
+            
+            <nav class="dropdownmenu"> <!--Creating a navigation panel-->
+                <ul> <!--Creating the unordered list for MENU bar-->
+                    <li class="neon-effect"><a href="#">STARTERS</a><!--Creating the first item for MENU bar with a class-->
+                        <ul id="submenu"><!--Creating the unordered list for SUBMENU for MAINS-->
+                            <li><a href="soup.html">Soups</a></li><!--Creating a few items as a submenu, we add the link for others html after-->
+                            <li><a href="">Starters</a></li>
+                        </ul> <!--Closing the submenu ul-->
+                    </li>
+        
+                    <li class="neon-effect"> <a href="#">MAINS</a><!--Continuing to do the same thing for other items-->
+                        <ul id="submenu"> 
+                            <li><a href="chicken.html">Chicken</a></li> 
+                            <li><a href="">Beef</a></li>
+                            <li><a href="">Lamb</a></li>
+                            <li><a href="">Vegetarian</a></li>
+                        </ul> 
+                    </li>
+                     <li class="neon-effect"> <a href="#">DESSERTS</a> 
+                        <ul id="submenu">
+                            <li><a href="">Sweet</a></li>
+                            <li><a href="">Yeast</a></li>
+                            <li><a href="">Christmas</a></li>
+                            <li><a href="">Easter</a></li>
+                        </ul> 
+                    </li>
+                    <li class="neon-effect"> <a href="#">SIDES</a> 
+                        <ul id="submenu">
+                            <li><a href="">Potatoes</a></li>
+                            <li><a href="">Veg</a></li>
+                        </ul> 
+                    </li>
+                    <li class="neon-effect"> <a href="snack.html">SNACKS</a>
+                    </li>
+                </ul> <!--Closing the MENU bar ul-->
+            </nav> <!--Closing the navigation -->
+                                                     <!--DONT FORGET TO ADD HYPERLINKS!!!!!!!! -->
+        
+            <!--Creating the DIV for picture with logo-->
+            <div id="logo"> 
+                <a href="Index.html"><img src="pictures/Rsmaller.jpg" alt="logo" width="500" height="500" class="logo"/></a>
+            </div>
+        
+
+    <!-- Recipes -->
+<h3>CHICKEN RECIPES</h3>
+<div id="search-container" class="search-container">
+    <input type="text" placeholder="Chicken curry..." name="search" id="searchbar" onkeyup="toggleRecipeList()" oninput="search_recipe()">
+    <!-- Button for submitting the search -->
+    <button type="button" onclick="search_recipe()" id="search-button">Search</button>
+
+    <div id="recipeList" class="recipe-list"> <!-- DIV for storing all the recipes that will be shown when searching -->
+        <ul id='list'> <!-- ADD HYPERLINKS -->
+            <li class="recipes"><a href="recipe.html">Brocolli Sauté</a></li>
+            <li class="recipes"><a href="#">Baked pasta</a></li>
+            <li class="recipes"><a href="#">Cordon Blue</a></li>
+            <li class="recipes"><a href="#">Chicken Broth</a></li>
+            <li class="recipes"><a href="#">Chicken Snitzel</a></li>
+            <li class="recipes"><a href="#">Chicken Steak</a></li>
+            <li class="recipes"><a href="#">Chicken Curry</a></li>
+            <li class="recipes"><a href="soup.html">Soup</a></li>
+            <li class="recipes"><a href="snack.html">Snacks</a></li>
+        </ul>
+    </div>
+</div>
+
+
+    <!--Recepe broccoli sote-->
+      <div id="sixbox">  
+         <div id="chickenList"> 
+             <div id="recipe-column">
+                <div id="imgh2p"> 
+                    <img src="pictures/brocollisote.jpg" alt="Brocolli Soté" class="brocolliimg"/> 
+                        <div id="h2p">
+                            <a href="recepe.html"><h2>Brocolli Sauté </h2></a>
+                            <p>Light meal that combines chicken and broccoli all together. Perfect match with rice or chips.<br>
+                            Ingedients needed: Chicken breasts, Onion,Broccoli, Blue Cheese, Milk ...
+                            <br>
+                            </p>
+                            <div class="rating">
+                                <!--Using input type radio to select one option , we could you checkbox to choose multiple option but we dont want that-->
+                                <!--Radio button creates a circle user can click on-->
+                                <!--Each button is assiginted to value from 1-5-->
+                                <!--We also have onclick atribute to see the result when radio button is selected-->
+                                <input type="radio" name="rating-brocolli" id="star-brocolli-5" onclick="Calculate('brocolli')">
+                                <!--We have created label for radio button because we want to change it to stars in css-->
+                                <!--Label is creted to help the clickable are to be easier to click on-->
+                                <!--label is used with for sttribute so connest with radio buton-->
+                                <label for="star-brocolli-5"></label>
+                                <input type="radio" name="rating-brocolli" id="star-brocolli-4" onclick="Calculate('brocolli')">
+                                <label for="star-brocolli-4"></label>
+                                <input type="radio" name="rating-brocolli" id="star-brocolli-3" onclick="Calculate('brocolli')">
+                                <label for="star-brocolli-3"></label>
+                                <input type="radio" name="rating-brocolli" id="star-brocolli-2" onclick="Calculate('brocolli')">
+                                <label for="star-brocolli-2"></label>
+                                <input type="radio" name="rating-brocolli" id="star-brocolli-1" onclick="Calculate('brocolli')">
+                                <label for="star-brocolli-1"></label>
+                                <p id="result-brocolli"></p>
+                            <div id="readmore"> <a href="recepe.html"><p> READ MORE...</p></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                        <!--Recepe gordon blue-->
+                        <div id="recipe-column">
+                        <div id="imgh2p"> 
+                            <img src="pictures/gordon.jpg" alt="Gordon Blue" class="brocolliimg"/> 
+                                <div id="h2p">
+                                    <h2>Cordon Blue</h2>
+                                    <p>Crispy Chicken with the melting bonus inside. Lovely combination of cheese,ham and chicken <br>
+                                    Ingedients needed: Chicken breasts, Ham, Cheese, Egg, Flour,Bread Crumbs ...
+                                    <br>
+                                    </p>
+                                
+                                    <div class="rating">
+                                        <input type="radio" name="rating-gordon" id="star-gordon-5" onclick="Calculate('gordon')">
+                                        <label for="star-gordon-5"></label>
+                                        <input type="radio" name="rating-gordon" id="star-gordon-4" onclick="Calculate('gordon')">
+                                        <label for="star-gordon-4"></label>
+                                        <input type="radio" name="rating-gordon" id="star-gordon-3" onclick="Calculate('gordon')">
+                                        <label for="star-gordon-3"></label>
+                                        <input type="radio" name="rating-gordon" id="star-gordon-2" onclick="Calculate('gordon')">
+                                        <label for="star-gordon-2"></label>
+                                        <input type="radio" name="rating-gordon" id="star-gordon-1" onclick="Calculate('gordon')">
+                                        <label for="star-gordon-1"></label>
+                                        <p id="result-gordon"></p>
+                                        <div id="readmore"> <p>READ MORE...</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    
+                        <!--chicken snitzel-->
+                        <div id="recipe-column">
+                        <div id="imgh2p"> 
+                        <img src="pictures/snitzel.jpg" alt="Chicken Snitzel" class="brocolliimg"/> 
+                            <div id="h2p">
+                                <h2>Chicken Snitzel</h2>
+                                <p>Crispy Chicken with homemade bread crumps. Perfect for lunch with creamy mash potatoes. <br>
+                                Ingedients needed: Chicken breasts, Egg, Flour,Bread Crumbs ...
+                                <br>
+                                </p>
+                                
+                                    <div class="rating">
+                                        <input type="radio" name="rating-snitzel" id="star-snitzel-5" onclick="Calculate('snitzel')">
+                                        <label for="star-snitzel-5"></label>
+                                        <input type="radio" name="rating-snitzel" id="star-snitzel-4" onclick="Calculate('snitzel')">
+                                        <label for="star-snitzel-4"></label>
+                                        <input type="radio" name="rating-snitzel" id="star-snitzel-3" onclick="Calculate('snitzel')">
+                                        <label for="star-snitzel-3"></label>
+                                        <input type="radio" name="rating-snitzel" id="star-snitzel-2" onclick="Calculate('snitzel')">
+                                        <label for="star-snitzel-2"></label>
+                                        <input type="radio" name="rating-snitzel" id="star-snitzel-1" onclick="Calculate('snitzel')">
+                                        <label for="star-snitzel-1"></label>
+                                        <p id="result-snitzel"></p>
+                                        <div id="readmore"> <p>READ MORE...</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div> 
+                    <!--chicken steak-->
+                    <div id="recipe-column">
+                    <div id="imgh2p"> 
+                    <img src="pictures/steak.jpg" alt="Chicken Steak" class="brocolliimg"/> 
+                        <div id="h2p">
+                            <h2>Chicken Steak</h2>
+                            <p>Quick easy lunch done in less than 30 minutes.  Great combination with light salads or chips.<br>
+                            Ingedients needed: Chicken breasts, Egg, Oil ...
+                            <br>
+                            <br>
+                            </p>
+                        
+                                <div class="rating">
+                                    <input type="radio" name="rating-steak" id="star-steak-5" onclick="Calculate('steak')">
+                                    <label for="star-steak-5"></label>
+                                    <input type="radio" name="rating-steak" id="star-steak-4" onclick="Calculate('steak')">
+                                    <label for="star-steak-4"></label>
+                                    <input type="radio" name="rating-steak" id="star-steak-3" onclick="Calculate('steak')">
+                                    <label for="star-steak-3"></label>
+                                    <input type="radio" name="rating-steak" id="star-steak-2" onclick="Calculate('steak')">
+                                    <label for="star-steak-2"></label>
+                                    <input type="radio" name="rating-steak" id="star-steak-1" onclick="Calculate('steak')">
+                                    <label for="star-steak-1"></label>
+                                    <p id="result-steak"></p>
+                                    <div id="readmore"> <p>READ MORE...</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--chicken curry-->
+                    <div id="recipe-column"> 
+                    <div id="imgh2p"> 
+                        <img src="pictures/curry.jpg" alt="Chicken Curry" class="brocolliimg"/> 
+                            <div id="h2p">
+                            <h2>Chicken Curry</h2>
+                                <p>If you do not like traditional curry, try this one. It has nice and smooth taste of sweet curry. <br>
+                            Ingedients needed: Chicken breasts, Onion, Sour Cream ...  
+                            <br>
+                            
+                                </p>
+                        
+                                    <div class="rating">
+                                        <input type="radio" name="rating-curry" id="star-curry-5" onclick="Calculate('curry')">
+                                        <label for="star-curry-5"></label>
+                                        <input type="radio" name="rating-curry" id="star-curry-4" onclick="Calculate('curry')">
+                                        <label for="star-curry-4"></label>
+                                        <input type="radio" name="rating-curry" id="star-curry-3" onclick="Calculate('curry')">
+                                        <label for="star-curry-3"></label>
+                                        <input type="radio" name="rating-curry" id="star-curry-2" onclick="Calculate('curry')">
+                                        <label for="star-curry-2"></label>
+                                        <input type="radio" name="rating-curry" id="star-curry-1" onclick="Calculate('curry')">
+                                        <label for="star-curry-1"></label>
+                                        <p id="result-curry"></p>
+                                        <div id="readmore"> <p>READ MORE...</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                         <!--baked pasta-->
+                    <div id="recipe-column"> 
+                        <div id="imgh2p"> 
+                            <img src="pictures/pasta.jpg" alt="Baked pasta" class="brocolliimg"/> 
+                                <div id="h2p">
+                                <h2>Baked pasta</h2>
+                                    <p>Are you sick of mash potatoes? Try chicken with pasta baked in the oven together with cheese. <br>
+                                Ingedients needed: Chicken breasts, Pasta, Cream, Cheese...  
+                                <br>
+                                    </p>
+                            
+                                        <div class="rating">
+                                            <input type="radio" name="rating-pasta" id="star-pasta-5" onclick="Calculate('pasta')">
+                                            <label for="star-pasta-5"></label>
+                                            <input type="radio" name="rating-pasta" id="star-pasta-4" onclick="Calculate('pasta')">
+                                            <label for="star-pasta-4"></label>
+                                            <input type="radio" name="rating-pasta" id="star-pasta-3" onclick="Calculate('pasta')">
+                                            <label for="star-pasta-3"></label>
+                                            <input type="radio" name="rating-pasta" id="star-pasta-2" onclick="Calculate('pasta')">
+                                            <label for="star-pasta-2"></label>
+                                            <input type="radio" name="rating-pasta" id="star-pasta-1" onclick="Calculate('pasta')">
+                                            <label for="star-pasta-1"></label>
+                                            <p id="result-pasta"></p>
+                                            <div id="readmore"> <p>READ MORE...</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                </div>
+            
+        </div>
+
+</body>
+<footer>
+    Copyright © 2024| created by Rebeka Kotuľáková & Radka Kotuľáková
+</footer>
+</html>

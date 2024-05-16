@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Twins Recipes-SOUP</title>
+    <link rel="icon" href="pictures/icon.png" type="image/x-icon"><!-- Icon of the webpage -->
+    <link href="css/try2sytles.css" rel="stylesheet" type="text/css">
+    <link href="css/chicken.css" rel="stylesheet" type="text/css">
+    <script src="js/search.js"></script>
+    <script src="js/rating.js"></script>
+</head>
+<body>
+    <header> 
+        <!-- Unordered list with main navigation links -->
+            <ul id="maininfo">
+                <!-- List item containing a link to the section with IDs -->
+                <li><a href="Index.html">HOME</a></li>
+                <li><a href="Index.html#about">ABOUT US</a></li> <!--Javascript for scrolling function,otherwise it was linked to a half of the div-->
+                <li><a href="Index.html#sidetext">CONTACT US</a></li>
+            </ul>
+        </header>
+        
+        <nav class="dropdownmenu"> <!--Creating a navigation panel-->
+            <ul> <!--Creating the unordered list for MENU bar-->
+                <li class="neon-effect"><a href="#">STARTERS</a><!--Creating the first item for MENU bar with a class-->
+                    <ul id="submenu"><!--Creating the unordered list for SUBMENU for MAINS-->
+                        <li><a href="soup.html">Soups</a></li><!--Creating a few items as a submenu, we add the link for others html after-->
+                        <li><a href="">Starters</a></li>
+                    </ul> <!--Closing the submenu ul-->
+                </li>
+    
+                <li class="neon-effect"> <a href="#">MAINS</a><!--Continuing to do the same thing for other items-->
+                    <ul id="submenu"> 
+                        <li><a href="chicken.html">Chicken</a></li> 
+                        <li><a href="">Beef</a></li>
+                        <li><a href="">Lamb</a></li>
+                        <li><a href="">Vegetarian</a></li>
+                    </ul> 
+                </li>
+                 <li class="neon-effect"> <a href="#">DESSERTS</a> 
+                    <ul id="submenu">
+                        <li><a href="">Sweet</a></li>
+                        <li><a href="">Yeast</a></li>
+                        <li><a href="">Christmas</a></li>
+                        <li><a href="">Easter</a></li>
+                    </ul> 
+                </li>
+                <li class="neon-effect"> <a href="#">SIDES</a> 
+                    <ul id="submenu">
+                        <li><a href="">Potatoes</a></li>
+                        <li><a href="">Veg</a></li>
+                    </ul> 
+                </li>
+                <li class="neon-effect"> <a href="snack.html">SNACKS</a>
+                </li>
+            </ul> <!--Closing the MENU bar ul-->
+        </nav> <!--Closing the navigation -->
+                                                 <!--DONT FORGET TO ADD HYPERLINKS!!!!!!!! -->
+    
+        <!--Creating the DIV for picture with logo-->
+        <div id="logo"> 
+            <a href="Index.html"><img src="pictures/Rsmaller.jpg" alt="logo" width="500" height="500" class="logo"/></a>
+        </div>
+    
+
+    <!--Recepes-->
+    <h3>SOUP RECIPES</h3>
+    <div id="search-container" class="search-container">
+        <input type="text" placeholder="Chicken curry..." name="search" id="searchbar" onkeyup="toggleRecipeList()" oninput="search_recipe()">
+        <!-- Button for submitting the search -->
+        <button type="button" onclick="search_recipe()" id="search-button">Search</button>
+    
+        <div id="recipeList" class="recipe-list"> <!-- DIV for storing all the recipes that will be shown when searching -->
+            <ul id='list'> <!-- ADD HYPERLINKS -->
+                <li class="recipes"><a href="recipe.html">Brocolli Sauté</a></li>
+                <li class="recipes"><a href="#">Baked pasta</a></li>
+                <li class="recipes"><a href="#">Cordon Blue</a></li>
+                <li class="recipes"><a href="#">Chicken Broth</a></li>
+                <li class="recipes"><a href="#">Chicken Snitzel</a></li>
+                <li class="recipes"><a href="#">Chicken Steak</a></li>
+                <li class="recipes"><a href="#">Chicken Curry</a></li>
+                <li class="recipes"><a href="soup.html">Soup</a></li>
+                <li class="recipes"><a href="snack.html">Snacks</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--Frankfurt soup-->
+        
+         <div id="chickenList">
+             <div id="recipe-column">
+                <div id="imgh2p"> 
+                    <img src="pictures/frankfurt.jpg" alt="Frankfurt soup" class="brocolliimg"/> 
+                        <div id="h2p">
+                            <h2>Frankfurt soup</h2>
+                            <p>Perfect soup for dinner after work. Easy to make.<br>
+                            Ingedients needed: Potatoes, Onion, ...
+                            <br>
+                            <br>
+                            <br>
+                            </p>
+                            <div class="rating">
+                                <input type="radio" name="rating-brocolli" id="star-brocolli-5" onclick="Calculate('brocolli')">
+                                <label for="star-brocolli-5"></label>
+                                <input type="radio" name="rating-brocolli" id="star-brocolli-4" onclick="Calculate('brocolli')">
+                                <label for="star-brocolli-4"></label>
+                                <input type="radio" name="rating-brocolli" id="star-brocolli-3" onclick="Calculate('brocolli')">
+                                <label for="star-brocolli-3"></label>
+                                <input type="radio" name="rating-brocolli" id="star-brocolli-2" onclick="Calculate('brocolli')">
+                                <label for="star-brocolli-2"></label>
+                                <input type="radio" name="rating-brocolli" id="star-brocolli-1" onclick="Calculate('brocolli')">
+                                <label for="star-brocolli-1"></label>
+                                <p id="result-brocolli"></p>
+                            <div id="readmore"> <p>READ MORE...</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                        <!--Capustnica-->
+                        <div id="recipe-column">
+                        <div id="imgh2p"> 
+                            <img src="pictures/capustnica.jpg" alt="Capustnica" class="brocolliimg"/> 
+                                <div id="h2p">
+                                    <h2>Sourkraut soup</h2>
+                                    <p>Slovak traditional Soup for Christmas. It might not look delicious but it is worth trying. <br>
+                                    Ingedients needed: Sour Kale, Smoked Pork Knee, Smoked Sausage, Mushrooms ...
+                                    </p>
+                                
+                                    <div class="rating">
+                                        <input type="radio" name="rating-gordon" id="star-gordon-5" onclick="Calculate('gordon')">
+                                        <label for="star-gordon-5"></label>
+                                        <input type="radio" name="rating-gordon" id="star-gordon-4" onclick="Calculate('gordon')">
+                                        <label for="star-gordon-4"></label>
+                                        <input type="radio" name="rating-gordon" id="star-gordon-3" onclick="Calculate('gordon')">
+                                        <label for="star-gordon-3"></label>
+                                        <input type="radio" name="rating-gordon" id="star-gordon-2" onclick="Calculate('gordon')">
+                                        <label for="star-gordon-2"></label>
+                                        <input type="radio" name="rating-gordon" id="star-gordon-1" onclick="Calculate('gordon')">
+                                        <label for="star-gordon-1"></label>
+                                        <p id="result-gordon"></p>
+                                        <div id="readmore"> <p>READ MORE...</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    
+                        <!--chicken Broth-->
+                        <div id="recipe-column">
+                        <div id="imgh2p"> 
+                        <img src="pictures/broth.jpg" alt="Chicken Broth--" class="brocolliimg"/> 
+                            <div id="h2p">
+                                <h2>Chicken Broth</h2>
+                                <p>Chicken Broth is perfect cure for your hangover. It is consider healty and healing. <br>
+                                Ingedients needed: Chicken bones,Carrots, Parsley ...
+                                </p>
+                                
+                                    <div class="rating">
+                                        <input type="radio" name="rating-snitzel" id="star-snitzel-5" onclick="Calculate('snitzel')">
+                                        <label for="star-snitzel-5"></label>
+                                        <input type="radio" name="rating-snitzel" id="star-snitzel-4" onclick="Calculate('snitzel')">
+                                        <label for="star-snitzel-4"></label>
+                                        <input type="radio" name="rating-snitzel" id="star-snitzel-3" onclick="Calculate('snitzel')">
+                                        <label for="star-snitzel-3"></label>
+                                        <input type="radio" name="rating-snitzel" id="star-snitzel-2" onclick="Calculate('snitzel')">
+                                        <label for="star-snitzel-2"></label>
+                                        <input type="radio" name="rating-snitzel" id="star-snitzel-1" onclick="Calculate('snitzel')">
+                                        <label for="star-snitzel-1"></label>
+                                        <p id="result-snitzel"></p>
+                                        <div id="readmore"> <p>READ MORE...</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div> 
+                    <!--Cumin soup-->
+                    <div id="recipe-column">
+                    <div id="imgh2p"> 
+                    <img src="pictures/cumin.jpg" alt="Cumin soup" class="brocolliimg"/> 
+                        <div id="h2p">
+                            <h2>Cumin soup</h2>
+                            <p>Soups can be made out of everything so why not eggs and cumin?. <br>
+                            Ingedients needed: Oil, Flour, Eggs, Cumin ...
+                            <br>
+                            <br>
+                            </p>
+                        
+                                <div class="rating">
+                                    <input type="radio" name="rating-steak" id="star-steak-5" onclick="Calculate('steak')">
+                                    <label for="star-steak-5"></label>
+                                    <input type="radio" name="rating-steak" id="star-steak-4" onclick="Calculate('steak')">
+                                    <label for="star-steak-4"></label>
+                                    <input type="radio" name="rating-steak" id="star-steak-3" onclick="Calculate('steak')">
+                                    <label for="star-steak-3"></label>
+                                    <input type="radio" name="rating-steak" id="star-steak-2" onclick="Calculate('steak')">
+                                    <label for="star-steak-2"></label>
+                                    <input type="radio" name="rating-steak" id="star-steak-1" onclick="Calculate('steak')">
+                                    <label for="star-steak-1"></label>
+                                    <p id="result-steak"></p>
+                                    <div id="readmore"> <p>READ MORE...</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Hokkaido with curry-->
+                    <div id="recipe-column"> 
+                    <div id="imgh2p"> 
+                        <img src="pictures/hokaido.jpg" alt="Hokkaido with curry" class="brocolliimg"/> 
+                            <div id="h2p">
+                            <h2>CHokkaido with curry</h2>
+                                <p>Seasonal Soup that will make you cozy and warm. Pumpkins can be tasty too. <br>
+                            Ingedients needed: Hokkaido, Potatoes, Onion, Cooking Cream ...
+                                </p>
+                        
+                                    <div class="rating">
+                                        <input type="radio" name="rating-curry" id="star-curry-5" onclick="Calculate('curry')">
+                                        <label for="star-curry-5"></label>
+                                        <input type="radio" name="rating-curry" id="star-curry-4" onclick="Calculate('curry')">
+                                        <label for="star-curry-4"></label>
+                                        <input type="radio" name="rating-curry" id="star-curry-3" onclick="Calculate('curry')">
+                                        <label for="star-curry-3"></label>
+                                        <input type="radio" name="rating-curry" id="star-curry-2" onclick="Calculate('curry')">
+                                        <label for="star-curry-2"></label>
+                                        <input type="radio" name="rating-curry" id="star-curry-1" onclick="Calculate('curry')">
+                                        <label for="star-curry-1"></label>
+                                        <p id="result-curry"></p>
+                                        <div id="readmore"> <p>READ MORE...</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                         <!--Beaten potatoes-->
+                    <div id="recipe-column"> 
+                        <div id="imgh2p"> 
+                            <img src="pictures/potatoesoup.jpg" alt="Beaten potatoes" class="brocolliimg"/> 
+                                <div id="h2p">
+                                <h2>Beaten Potatoes</h2>
+                                    <p>Lovely Potatoes in different forms. You will not be hungry after this. <br>
+                                Ingedients needed: Potatoes, Cream, Beana, Vinegar...
+                                    </p>
+                            
+                                        <div class="rating">
+                                            <input type="radio" name="rating-pasta" id="star-pasta-5" onclick="Calculate('pasta')">
+                                            <label for="star-pasta-5"></label>
+                                            <input type="radio" name="rating-pasta" id="star-pasta-4" onclick="Calculate('pasta')">
+                                            <label for="star-pasta-4"></label>
+                                            <input type="radio" name="rating-pasta" id="star-pasta-3" onclick="Calculate('pasta')">
+                                            <label for="star-pasta-3"></label>
+                                            <input type="radio" name="rating-pasta" id="star-pasta-2" onclick="Calculate('pasta')">
+                                            <label for="star-pasta-2"></label>
+                                            <input type="radio" name="rating-pasta" id="star-pasta-1" onclick="Calculate('pasta')">
+                                            <label for="star-pasta-1"></label>
+                                            <p id="result-pasta"></p>
+                                            <div id="readmore"> <p>READ MORE...</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                </div>
+            
+        </div>
+
+</body>
+<footer>
+    Copyright © 2024| created by Rebeka Kotuľáková & Radka Kotuľáková
+</footer>
+</html>
